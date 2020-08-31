@@ -1,11 +1,11 @@
 const express = require('express');
+const cors = require('cors');
 const app = express();
 app.use(cors());
 const http = require('http').Server(app);
 const io = require('socket.io')(http);
 require('dotenv').config();
 const mongoose = require('mongoose');
-const cors = require('cors');
 
 let users = [];
 let messages = [];
